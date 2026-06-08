@@ -164,12 +164,12 @@ http://localhost:3000
 
 ## 🚀 Deployment
 
-Deploy with:
+Deploed with:
 
 ```bash
 vercel
 ```
-
+Visit- https://pathfinder-pro-seven.vercel.app/
 Add environment variables:
 
 ```env
