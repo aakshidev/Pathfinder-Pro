@@ -14,28 +14,17 @@
   --canvas: #f7f3ed;
   --border: rgba(139,100,60,0.1);
   --border-strong: rgba(139,100,60,0.2);
-
-  /* Primary: deep saffron */
   --accent: #c4621a;
   --accent-light: #fdf0e6;
   --accent-hover: #a85114;
-
-  /* Secondary: forest teal */
   --teal: #1a7a6a;
   --teal-light: #e4f5f1;
-
-  /* Amber gold */
   --gold: #d4900a;
   --gold-light: #fef8e4;
-
-  /* Rose */
   --rose: #c42b5a;
   --rose-light: #fde9ef;
-
-  /* Indigo */
   --indigo: #3d52a0;
   --indigo-light: #eaedfa;
-
   --radius: 14px;
   --radius-sm: 9px;
   --radius-pill: 999px;
@@ -55,8 +44,6 @@ body {
   min-height: 100vh;
   line-height: 1.6;
 }
-
-/* ── TOPBAR ─────────────────────────────── */
 .topbar {
   background: var(--ink);
   color: #fff;
@@ -110,8 +97,6 @@ body {
 }
 .pstep.done { background: var(--teal); }
 .pstep.active { background: var(--accent); }
-
-/* ── LAYOUT ─────────────────────────────── */
 .app-wrap {
   display: grid;
   grid-template-columns: 1fr var(--sidebar);
@@ -127,8 +112,6 @@ body {
   height: calc(100vh - 58px);
   position: sticky; top: 58px;
 }
-
-/* ── SECTION HEADERS ─────────────────────── */
 .section-eyebrow {
   display: flex; align-items: center; gap: 12px; margin-bottom: 22px;
 }
@@ -139,7 +122,6 @@ body {
   color: var(--accent);
 }
 .eyebrow-line { flex: 1; height: 1px; background: var(--border-strong); }
-
 .page-title {
   font-family: var(--font-head);
   font-size: 2.1rem; font-weight: 800;
@@ -150,8 +132,6 @@ body {
   font-size: 0.92rem; color: var(--muted);
   font-weight: 400; margin-bottom: 28px;
 }
-
-/* ── CARDS ───────────────────────────────── */
 .card {
   background: var(--surface);
   border-radius: var(--radius);
@@ -175,8 +155,6 @@ body {
 .card-icon.teal { background: var(--teal-light); }
 .card-icon.gold { background: var(--gold-light); }
 .card-icon.indigo { background: var(--indigo-light); }
-
-/* ── FORM ELEMENTS ───────────────────────── */
 .field-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
 .field { display: flex; flex-direction: column; gap: 6px; }
 .field label { font-size: 0.78rem; font-weight: 500; color: var(--ink2); }
@@ -192,10 +170,6 @@ body {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(196,98,26,0.1);
 }
-.field input::placeholder { color: var(--muted); }
-.field select option { background: var(--surface); color: var(--ink); }
-
-/* ── TEST SCORE SECTION ───────────────────── */
 .exam-selector {
   display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px;
 }
@@ -210,22 +184,8 @@ body {
 }
 .exam-pill:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
 .exam-pill.active { background: var(--accent); border-color: var(--accent); color: #fff; }
-
 .exam-input-wrap { display: none; flex-direction: column; gap: 10px; }
 .exam-input-wrap.visible { display: flex; }
-.exam-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-
-/* Score hint */
-.score-hint {
-  background: var(--teal-light);
-  border-left: 3px solid var(--teal);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  padding: 8px 12px; font-size: 0.78rem; color: var(--ink2);
-  display: none;
-}
-.score-hint.visible { display: block; }
-
-/* ── TIPS ACCORDION ──────────────────────── */
 .tips-section { margin-top: 4px; }
 .tip-accordion {
   border: 1px solid var(--border-strong);
@@ -238,11 +198,11 @@ body {
   padding: 12px 16px;
   cursor: pointer; background: var(--canvas);
   font-size: 0.85rem; font-weight: 600; color: var(--ink2);
-  gap: 10px; transition: background 0.15s;
+  gap: 10px;
+  transition: background 0.15s;
   border: none; width: 100%; text-align: left; font-family: var(--font-body);
 }
 .tip-accordion-head:hover { background: var(--accent-light); }
-.tip-accordion-head .tip-icon { font-size: 16px; flex-shrink: 0; }
 .tip-chevron { font-size: 11px; color: var(--muted); transition: transform 0.2s; margin-left: auto; }
 .tip-accordion.open .tip-chevron { transform: rotate(180deg); }
 .tip-accordion-body {
@@ -265,8 +225,6 @@ body {
   border-radius: 50%; font-size: 10px; font-weight: 700;
   display: flex; align-items: center; justify-content: center; margin-top: 1px;
 }
-
-/* ── UPLOAD ZONE ─────────────────────────── */
 .upload-zone {
   border: 2px dashed var(--border-strong);
   border-radius: var(--radius);
@@ -284,7 +242,6 @@ body {
   justify-content: center; margin: 0 auto 12px;
   border: 1px solid var(--border-strong); font-size: 20px;
 }
-.upload-zone p { font-size: 0.84rem; color: var(--muted); margin-top: 6px; }
 .upload-btn {
   display: inline-block; background: var(--ink); color: #fff;
   border-radius: var(--radius-pill); padding: 8px 18px;
@@ -298,9 +255,7 @@ body {
   border-radius: var(--radius-sm); padding: 11px 15px; margin-top: 12px;
 }
 .file-attached .fname { flex: 1; font-size: 0.85rem; font-weight: 500; color: var(--ink2); }
-.file-attached .fsize { font-size: 0.78rem; color: var(--muted); }
 .remove-file { background: none; border: none; font-size: 17px; cursor: pointer; color: var(--muted); }
-
 .score-section { display: none; margin-top: 16px; }
 .score-row { display: flex; align-items: center; gap: 12px; margin-bottom: 9px; }
 .score-label { font-size: 0.78rem; color: var(--ink2); width: 88px; flex-shrink: 0; }
@@ -316,8 +271,6 @@ body {
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   padding: 9px 13px; font-size: 0.8rem; color: var(--ink2); margin-top: 12px;
 }
-
-/* ── GENERATE BTN ────────────────────────── */
 .gen-btn {
   display: flex; align-items: center; justify-content: center; gap: 10px;
   width: 100%; padding: 15px;
@@ -335,10 +288,7 @@ body {
 .gen-btn:hover::before { opacity: 1; }
 .gen-btn span { position: relative; z-index: 1; }
 .gen-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-lg); }
-.gen-btn:active { transform: translateY(0); }
 .gen-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-
-/* ── RESULTS ─────────────────────────────── */
 .results-wrap { display: none; margin-top: 34px; animation: slideUp 0.4s ease; }
 @keyframes slideUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 .tab-bar {
@@ -355,7 +305,6 @@ body {
 .tab-btn.active { background: var(--ink); color: #fff; }
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
-
 .r-card {
   background: var(--surface); border: 1px solid var(--border-strong);
   border-radius: var(--radius); padding: 18px 20px; margin-bottom: 12px;
@@ -376,13 +325,6 @@ body {
 .badge-reach { background: var(--rose-light); color: var(--rose); }
 .badge-target { background: var(--gold-light); color: var(--gold); }
 .badge-safety { background: var(--teal-light); color: var(--teal); }
-.badge-fit { background: var(--indigo-light); color: var(--indigo); }
-.r-meta { display: flex; flex-wrap: wrap; gap: 7px 18px; font-size: 0.8rem; color: var(--ink2); margin-bottom: 11px; }
-.r-tip {
-  background: var(--canvas); border-radius: var(--radius-sm);
-  padding: 9px 13px; font-size: 0.8rem; color: var(--ink2);
-  border-left: 3px solid var(--accent);
-}
 .match-bar-wrap { margin-bottom: 12px; }
 .match-bar-head { display: flex; justify-content: space-between; font-size: 0.76rem; color: var(--muted); margin-bottom: 5px; }
 .match-bar { height: 5px; background: var(--border-strong); border-radius: 3px; overflow: hidden; }
@@ -419,15 +361,12 @@ body {
 }
 .tl-priority { font-size: 0.68rem; padding: 2px 8px; border-radius: var(--radius-pill); font-weight: 600; }
 .priority-high { background: var(--rose-light); color: var(--rose); }
-.priority-med { background: var(--gold-light); color: var(--gold); }
 .tl-tasks { list-style: none; }
 .tl-tasks li {
   font-size: 0.82rem; color: var(--ink2); padding: 3px 0;
   display: flex; align-items: flex-start; gap: 7px;
 }
 .tl-tasks li::before { content: '→'; color: var(--muted); font-size: 0.78rem; margin-top: 1px; flex-shrink: 0; }
-
-/* ── STATS ROW ───────────────────────────── */
 .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 18px; }
 .stat-tile {
   background: var(--surface); border: 1px solid var(--border-strong);
@@ -439,8 +378,6 @@ body {
   color: var(--accent); letter-spacing: -0.02em; line-height: 1; margin-bottom: 4px;
 }
 .stat-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; font-weight: 500; }
-
-/* ── LOADING ─────────────────────────────── */
 .loading-wrap { text-align: center; padding: 44px 0; }
 .loading-spinner {
   width: 30px; height: 30px;
@@ -448,9 +385,6 @@ body {
   border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto 12px;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
-.loading-wrap p { font-size: 0.85rem; color: var(--muted); }
-
-/* ── CHECKLIST ───────────────────────────── */
 .checklist-row {
   display: flex; align-items: center; gap: 10px;
   padding: 9px 0; border-bottom: 1px solid var(--border);
@@ -463,9 +397,6 @@ body {
   justify-content: center; transition: background 0.15s, border-color 0.15s;
 }
 .checklist-row.checked .check-box { background: var(--teal); border-color: var(--teal); color: #fff; font-size: 10px; }
-.checklist-row.checked span { text-decoration: line-through; color: var(--muted); }
-
-/* ── DREAM UNI CHIPS ─────────────────────── */
 .uni-tags-wrap { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 .uni-tag {
   display: inline-flex; align-items: center; gap: 6px;
@@ -474,18 +405,12 @@ body {
   padding: 4px 10px; font-size: 0.78rem; font-weight: 500;
 }
 .uni-tag button { background: none; border: none; cursor: pointer; color: var(--accent); font-size: 14px; opacity: 0.7; padding: 0; }
-.uni-tag button:hover { opacity: 1; }
-
-/* ── TIP BANNER ──────────────────────────── */
 .tip-banner {
   background: var(--accent-light); border: 1px solid rgba(196,98,26,0.2);
   border-radius: var(--radius-sm); padding: 11px 15px;
   font-size: 0.8rem; color: var(--accent-hover);
   display: flex; align-items: flex-start; gap: 9px; margin-bottom: 18px;
 }
-.tip-icon { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
-
-/* ── SIDEBAR / CHAT ──────────────────────── */
 .chat-header {
   padding: 18px 18px 14px;
   border-bottom: 1px solid var(--border-strong);
@@ -504,7 +429,6 @@ body {
   display: flex; gap: 6px; padding: 9px 14px;
   overflow-x: auto; border-bottom: 1px solid var(--border); scrollbar-width: none;
 }
-.quick-chips::-webkit-scrollbar { display: none; }
 .chip {
   display: inline-flex; align-items: center; gap: 4px;
   padding: 5px 11px; background: var(--canvas); border: 1px solid var(--border-strong);
@@ -531,14 +455,6 @@ body {
   background: var(--ink); color: #fff;
   align-self: flex-end; border-radius: 14px 3px 14px 14px;
 }
-.msg-thinking { display: flex; gap: 4px; align-items: center; padding: 11px 14px; }
-.think-dot {
-  width: 6px; height: 6px; background: var(--muted); border-radius: 50%;
-  animation: pulse 1.2s infinite;
-}
-.think-dot:nth-child(2) { animation-delay: 0.2s; }
-.think-dot:nth-child(3) { animation-delay: 0.4s; }
-@keyframes pulse { 0%, 80%, 100% { transform: scale(0.8); opacity: 0.4; } 40% { transform: scale(1); opacity: 1; } }
 .chat-input-wrap {
   padding: 11px 13px; border-top: 1px solid var(--border);
   display: flex; gap: 8px; align-items: flex-end;
@@ -551,7 +467,6 @@ body {
   background: var(--surface);
 }
 .chat-input-wrap textarea:focus { border-color: var(--accent); }
-.chat-input-wrap textarea::placeholder { color: var(--muted); }
 .send-btn {
   width: 36px; height: 36px; background: var(--accent); border: none;
   border-radius: 9px; cursor: pointer; display: flex; align-items: center;
@@ -559,30 +474,18 @@ body {
   transition: background 0.15s;
 }
 .send-btn:hover { background: var(--accent-hover); }
-
-/* ── RESPONSIVE ──────────────────────────── */
 @media (max-width: 1000px) {
   .app-wrap { grid-template-columns: 1fr; }
   .sidebar-panel { height: 460px; position: relative; top: 0; border-left: none; border-top: 1px solid var(--border-strong); }
   .stats-row { grid-template-columns: repeat(2, 1fr); }
   .main-panel { padding: 22px 18px 56px; }
 }
-@media (max-width: 600px) {
-  .topbar { padding: 0 14px; }
-  .topbar-badge, .progress-indicator { display: none; }
-  .tab-bar { flex-wrap: wrap; }
-  .tab-btn { flex: 1 1 40%; }
-  .page-title { font-size: 1.7rem; }
-}
 </style>
 </head>
 <body>
 
 <header class="topbar">
-  <div class="topbar-brand">
-    <div class="brand-gem">🧭</div>
-    Pathfinder Pro
-  </div>
+  <div class="topbar-brand"><div class="brand-gem">🧭</div>Pathfinder Pro</div>
   <div class="topbar-right" style="display:flex;align-items:center;gap:18px;">
     <div class="progress-indicator">
       <span>Progress</span>
@@ -593,101 +496,35 @@ body {
         <div class="pstep" id="ps4"></div>
       </div>
     </div>
-    <div class="topbar-badge">✦ Powered</div>
+    <div class="topbar-badge">✦ AI Powered</div>
   </div>
 </header>
 
 <div class="app-wrap">
   <main class="main-panel">
-
-    <div class="section-eyebrow">
-      <span class="eyebrow-label">Step 1 — Your Profile</span>
-      <div class="eyebrow-line"></div>
-    </div>
-
+    <div class="section-eyebrow"><span class="eyebrow-label">Step 1 — Your Profile</span><div class="eyebrow-line"></div></div>
     <h1 class="page-title">Let's map your path<br>to the right college.</h1>
-    <p class="page-sub">Fill in your details and we generate a personalised college plan, career roadmap, and gap analysis.</p>
+    <p class="page-sub">Fill in your details and get a personalised college plan, career roadmap, and gap analysis.</p>
+    <div class="tip-banner"><span class="tip-icon">💡</span><span>The more details you add, the sharper your recommendations.</span></div>
 
-    <div class="tip-banner">
-      <span class="tip-icon">💡</span>
-      <span>The more details you add, the sharper your recommendations. Upload your CV for a deeper analysis!</span>
-    </div>
-
-    <!-- IDENTITY -->
     <div class="card">
       <div class="card-title"><div class="card-icon saffron">👤</div> About You</div>
       <div class="field-grid">
         <div class="field"><label>Full Name</label><input type="text" id="studentName" placeholder="Riya Sharma"></div>
         <div class="field"><label>Email</label><input type="email" id="studentEmail" placeholder="riya@email.com"></div>
         <div class="field"><label>Current School / College</label><input type="text" id="currentSchool" placeholder="Your institution name"></div>
-        <div class="field">
-          <label>Graduation Year</label>
-          <select id="gradYear">
-            <option value="">Select year</option>
-            <option>2025</option><option>2026</option><option>2027</option><option>2028</option><option>2029</option>
-          </select>
-        </div>
-        <div class="field"><label>LinkedIn (optional)</label><input type="url" id="linkedin" placeholder="linkedin.com/in/..."></div>
-        <div class="field"><label>GitHub / Portfolio (optional)</label><input type="url" id="github" placeholder="github.com/..."></div>
+        <div class="field"><label>Graduation Year</label><select id="gradYear"><option value="">Select year</option><option>2025</option><option>2026</option><option>2027</option><option>2028</option></select></div>
       </div>
     </div>
 
-    <!-- ACADEMICS -->
     <div class="card">
       <div class="card-title"><div class="card-icon gold">📚</div> Academics & Goals</div>
       <div class="field-grid">
-        <div class="field">
-          <label>Grade / Percentage / CGPA</label>
-          <input type="text" id="gpa" placeholder="e.g. 92%, 3.8 GPA, 8.7 CGPA" oninput="updateProgress()">
-        </div>
-        <div class="field">
-          <label>Intended Major / Stream</label>
-          <input type="text" id="major" placeholder="e.g. Computer Science, MBBS" oninput="updateProgress()">
-        </div>
-        <div class="field">
-          <label>Preferred Country / Region</label>
-          <select id="preferredLocation">
-            <option value="">Anywhere</option>
-            <option>India</option>
-            <option>USA</option>
-            <option>UK</option>
-            <option>Canada</option>
-            <option>Australia</option>
-            <option>Germany</option>
-            <option>Singapore</option>
-            <option>UAE / Middle East</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Max Annual Fee (₹ / $)</label>
-          <input type="text" id="maxTuition" placeholder="e.g. ₹2L or $30,000">
-        </div>
-        <div class="field">
-          <label>Application Type</label>
-          <select id="appType">
-            <option value="">Select...</option>
-            <option>Early Decision (ED)</option>
-            <option>Early Action (EA)</option>
-            <option>Regular Decision</option>
-            <option>JoSAA / CSAB Counselling</option>
-            <option>MCC Counselling (NEET)</option>
-            <option>CAP Counselling</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Category (India)</label>
-          <select id="category">
-            <option value="">Not applicable</option>
-            <option>General / Unreserved</option>
-            <option>OBC-NCL</option>
-            <option>SC</option>
-            <option>ST</option>
-            <option>EWS</option>
-            <option>PwD</option>
-          </select>
-        </div>
+        <div class="field"><label>Grade / Percentage / CGPA</label><input type="text" id="gpa" placeholder="e.g. 92%, 3.8 GPA, 8.7 CGPA"></div>
+        <div class="field"><label>Intended Major / Stream</label><input type="text" id="major" placeholder="e.g. Computer Science, MBBS"></div>
+        <div class="field"><label>Preferred Country / Region</label><select id="preferredLocation"><option value="">Anywhere</option><option>India</option><option>USA</option><option>UK</option><option>Canada</option><option>Australia</option><option>Germany</option></select></div>
+        <div class="field"><label>Max Annual Fee (₹ / $)</label><input type="text" id="maxTuition" placeholder="e.g. ₹2L or $30,000"></div>
       </div>
-
       <div class="field" style="margin-top:14px;">
         <label>🌟 Dream Institutions</label>
         <input type="text" id="dreamUniInput" placeholder="Type an institution name and press Enter..." onkeydown="addDreamUni(event)">
@@ -695,142 +532,19 @@ body {
       </div>
     </div>
 
-    <!-- TEST SCORES -->
     <div class="card">
       <div class="card-title"><div class="card-icon indigo">📝</div> Test Scores</div>
-
-      <p style="font-size:0.8rem;color:var(--muted);margin-bottom:12px;">Select the exam(s) you have taken or are planning to take:</p>
-
       <div class="exam-selector" id="examSelector">
         <button class="exam-pill" data-exam="jee-main" onclick="toggleExam(this)">JEE Main</button>
-        <button class="exam-pill" data-exam="jee-adv" onclick="toggleExam(this)">JEE Advanced</button>
         <button class="exam-pill" data-exam="neet" onclick="toggleExam(this)">NEET-UG</button>
-        <button class="exam-pill" data-exam="cuet" onclick="toggleExam(this)">CUET-UG</button>
-        <button class="exam-pill" data-exam="bitsat" onclick="toggleExam(this)">BITSAT</button>
-        <button class="exam-pill" data-exam="viteee" onclick="toggleExam(this)">VITEEE</button>
-        <button class="exam-pill" data-exam="mhtcet" onclick="toggleExam(this)">MHT-CET</button>
-        <button class="exam-pill" data-exam="kcet" onclick="toggleExam(this)">KCET</button>
-        <button class="exam-pill" data-exam="wbjee" onclick="toggleExam(this)">WBJEE</button>
         <button class="exam-pill" data-exam="sat" onclick="toggleExam(this)">SAT</button>
-        <button class="exam-pill" data-exam="act" onclick="toggleExam(this)">ACT</button>
-        <button class="exam-pill" data-exam="gre" onclick="toggleExam(this)">GRE</button>
-        <button class="exam-pill" data-exam="gmat" onclick="toggleExam(this)">GMAT</button>
         <button class="exam-pill" data-exam="ielts" onclick="toggleExam(this)">IELTS</button>
         <button class="exam-pill" data-exam="toefl" onclick="toggleExam(this)">TOEFL</button>
-        <button class="exam-pill" data-exam="cat" onclick="toggleExam(this)">CAT</button>
-        <button class="exam-pill" data-exam="clat" onclick="toggleExam(this)">CLAT</button>
-        <button class="exam-pill" data-exam="upsc" onclick="toggleExam(this)">UPSC</button>
+        <button class="exam-pill" data-exam="gre" onclick="toggleExam(this)">GRE</button>
       </div>
-
       <div id="examInputsContainer"></div>
     </div>
 
-    <!-- APPLICATION TIPS -->
-    <div class="card">
-      <div class="card-title"><div class="card-icon saffron">💡</div> Application Improvement Tips</div>
-      <p style="font-size:0.8rem;color:var(--muted);margin-bottom:14px;">Click any section to expand personalised tips:</p>
-      <div class="tips-section" id="tipsSection">
-
-        <div class="tip-accordion" id="tip-essay">
-          <button class="tip-accordion-head" onclick="toggleTip('tip-essay')">
-            <span class="tip-icon">✍️</span> Essays & Personal Statement
-            <span class="tip-chevron">▼</span>
-          </button>
-          <div class="tip-accordion-body">
-            <ul class="tip-list">
-              <li><span class="tip-bullet">1</span>Start with a specific, vivid moment — not a generic "I want to change the world" opener. Show, don't tell.</li>
-              <li><span class="tip-bullet">2</span>Reveal your personality: quirks, humour, genuine passion. Admissions committees read thousands — yours must sound like you.</li>
-              <li><span class="tip-bullet">3</span>Draft early (June/July for fall admission). Revise at least 4 times. Get feedback from a trusted mentor.</li>
-              <li><span class="tip-bullet">4</span>For "Why this College/University?" essays — mention specific faculty, labs, clubs, or courses. Generic praise backfires.</li>
-              <li><span class="tip-bullet">5</span>Keep your Statement of Purpose (SOP) achievement-driven with quantifiable outcomes wherever possible.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="tip-accordion" id="tip-exam">
-          <button class="tip-accordion-head" onclick="toggleTip('tip-exam')">
-            <span class="tip-icon">📊</span> Exam Score Improvement
-            <span class="tip-chevron">▼</span>
-          </button>
-          <div class="tip-accordion-body">
-            <ul class="tip-list">
-              <li><span class="tip-bullet">1</span><strong>JEE/NEET:</strong> Solve 5–10 years of previous papers. Focus on NCERT thoroughly before moving to advanced material.</li>
-              <li><span class="tip-bullet">2</span><strong>CUET:</strong> Domain subjects follow NCERT strictly. English section benefits from daily reading practice.</li>
-              <li><span class="tip-bullet">3</span><strong>SAT/ACT:</strong> Khan Academy's free SAT prep is excellent. Practice under timed, real test conditions.</li>
-              <li><span class="tip-bullet">4</span><strong>IELTS/TOEFL:</strong> Target 7.0+ IELTS or 100+ TOEFL. Practise all four skills daily for 3–4 months.</li>
-              <li><span class="tip-bullet">5</span>Identify weak topics using mock tests and spend 80% of prep time on those, not your strengths.</li>
-              <li><span class="tip-bullet">6</span>Time management in-hall matters as much as knowledge. Simulate exam conditions in every practice session.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="tip-accordion" id="tip-ec">
-          <button class="tip-accordion-head" onclick="toggleTip('tip-ec')">
-            <span class="tip-icon">🏆</span> Extracurriculars & Projects
-            <span class="tip-chevron">▼</span>
-          </button>
-          <div class="tip-accordion-body">
-            <ul class="tip-list">
-              <li><span class="tip-bullet">1</span>Depth over breadth — 2–3 deeply committed activities > 10 surface-level ones. Show leadership and impact.</li>
-              <li><span class="tip-bullet">2</span>For tech applications: build 3–4 GitHub projects and a portfolio site. Open-source contributions stand out.</li>
-              <li><span class="tip-bullet">3</span>Participate in national/international Olympiads, hackathons, or science fairs — these signal genuine interest.</li>
-              <li><span class="tip-bullet">4</span>Volunteer work related to your intended field shows commitment beyond grades.</li>
-              <li><span class="tip-bullet">5</span>Research internships (even virtual ones) add immense weight to Science, Engineering, and Medical applications.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="tip-accordion" id="tip-rec">
-          <button class="tip-accordion-head" onclick="toggleTip('tip-rec')">
-            <span class="tip-icon">📬</span> Letters of Recommendation
-            <span class="tip-chevron">▼</span>
-          </button>
-          <div class="tip-accordion-body">
-            <ul class="tip-list">
-              <li><span class="tip-bullet">1</span>Choose recommenders who know you well — not just the most popular teacher or the one whose subject you topped.</li>
-              <li><span class="tip-bullet">2</span>Ask at least 3–4 months in advance. Provide them a "brag sheet" listing your achievements, goals, and stories.</li>
-              <li><span class="tip-bullet">3</span>A warm, story-driven letter beats a generic "This student is excellent" letter every single time.</li>
-              <li><span class="tip-bullet">4</span>For Indian college applications to abroad: a research supervisor's recommendation carries more weight than a school teacher's.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="tip-accordion" id="tip-finance">
-          <button class="tip-accordion-head" onclick="toggleTip('tip-finance')">
-            <span class="tip-icon">💰</span> Scholarships & Financial Aid
-            <span class="tip-chevron">▼</span>
-          </button>
-          <div class="tip-accordion-body">
-            <ul class="tip-list">
-              <li><span class="tip-bullet">1</span><strong>India:</strong> Apply for NSP, state scholarships, and institution-specific merit awards. Check AICTE & UGC portals.</li>
-              <li><span class="tip-bullet">2</span><strong>Abroad:</strong> Submit FAFSA (USA) or Student Finance (UK) as early as possible — many grants are first-come, first-served.</li>
-              <li><span class="tip-bullet">3</span>Search Fastweb, Scholarships.com, and Buddy4Study for subject-specific scholarships.</li>
-              <li><span class="tip-bullet">4</span>Inlaks, Tata Trust, and Narotam Sekhsaria Foundation offer prestigious scholarships for Indian students abroad.</li>
-              <li><span class="tip-bullet">5</span>Don't neglect college-specific merit aid — many institutions auto-consider applicants above a GPA/rank threshold.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="tip-accordion" id="tip-interview">
-          <button class="tip-accordion-head" onclick="toggleTip('tip-interview')">
-            <span class="tip-icon">🎤</span> Interviews & Group Discussions
-            <span class="tip-chevron">▼</span>
-          </button>
-          <div class="tip-accordion-body">
-            <ul class="tip-list">
-              <li><span class="tip-bullet">1</span>Research the institution thoroughly — recent faculty research, notable alumni, unique programs. Drop specific names.</li>
-              <li><span class="tip-bullet">2</span>Prepare a crisp 90-second self-introduction. Practice it out loud until it flows naturally.</li>
-              <li><span class="tip-bullet">3</span>For MBA/management GDs: structure your points (Point → Reason → Example). Listen actively before speaking.</li>
-              <li><span class="tip-bullet">4</span>Dress professionally for online interviews — your entire visible space (background, lighting) signals seriousness.</li>
-              <li><span class="tip-bullet">5</span>Have 2–3 thoughtful questions ready to ask the interviewer. It shows genuine interest.</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- CV UPLOAD -->
     <div class="card">
       <div class="card-title"><div class="card-icon teal">📄</div> CV / Resume</div>
       <div class="upload-zone" id="uploadZone">
@@ -841,14 +555,11 @@ body {
       </div>
       <div class="file-attached" id="fileAttached">
         <span style="font-size:20px;">📄</span>
-        <div>
-          <div class="fname" id="fileAttachedName">resume.pdf</div>
-          <div class="fsize" id="fileAttachedSize">0 KB</div>
-        </div>
+        <div><div class="fname" id="fileAttachedName">resume.pdf</div></div>
         <button class="remove-file" onclick="removeResume()" title="Remove">✕</button>
       </div>
       <div class="score-section" id="scoreSection">
-        <div style="margin-bottom:10px;font-size:0.78rem;font-weight:600;color:var(--ink2);letter-spacing:0.05em;text-transform:uppercase;">Resume Analysis</div>
+        <div style="margin-bottom:10px;font-size:0.78rem;font-weight:600;">Resume Analysis</div>
         <div class="score-row"><span class="score-label">Academics</span><div class="score-track"><div class="score-fill" id="sf-academic"></div></div><span class="score-val" id="sv-academic">–</span></div>
         <div class="score-row"><span class="score-label">Leadership</span><div class="score-track"><div class="score-fill" id="sf-leadership"></div></div><span class="score-val" id="sv-leadership">–</span></div>
         <div class="score-row"><span class="score-label">Projects</span><div class="score-track"><div class="score-fill" id="sf-projects"></div></div><span class="score-val" id="sv-projects">–</span></div>
@@ -857,32 +568,9 @@ body {
       </div>
     </div>
 
-    <!-- CHECKLIST -->
-    <div class="card">
-      <div class="card-title"><div class="card-icon teal">✅</div> Application Checklist</div>
-      <div id="checklist">
-        <div class="checklist-row" onclick="toggleCheck(this)"><div class="check-box"></div><span>Research 10–15 target colleges/universities</span></div>
-        <div class="checklist-row" onclick="toggleCheck(this)"><div class="check-box"></div><span>Register for applicable entrance exams (JEE/NEET/CUET/SAT etc.)</span></div>
-        <div class="checklist-row" onclick="toggleCheck(this)"><div class="check-box"></div><span>Request 2–3 letters of recommendation</span></div>
-        <div class="checklist-row" onclick="toggleCheck(this)"><div class="check-box"></div><span>Draft and refine personal statement / SOP</span></div>
-        <div class="checklist-row" onclick="toggleCheck(this)"><div class="check-box"></div><span>Upload official mark sheets and transcripts</span></div>
-        <div class="checklist-row" onclick="toggleCheck(this)"><div class="check-box"></div><span>Research scholarships and financial aid options</span></div>
-        <div class="checklist-row" onclick="toggleCheck(this)"><div class="check-box"></div><span>Attend open days or virtual campus tours</span></div>
-        <div class="checklist-row" onclick="toggleCheck(this)"><div class="check-box"></div><span>Prepare for entrance interviews / GDs (if applicable)</span></div>
-      </div>
-    </div>
+    <button class="gen-btn" id="generateBtn" onclick="generatePlan()"><span>Generate My Plan</span><span style="position:relative;z-index:1;font-size:1.1em;">→</span></button>
 
-    <button class="gen-btn" id="generateBtn" onclick="generatePlan()">
-      <span>Generate My Plan</span>
-      <span style="position:relative;z-index:1;font-size:1.1em;">→</span>
-    </button>
-
-    <!-- RESULTS -->
     <div class="results-wrap" id="resultsWrap">
-      <div class="section-eyebrow" style="margin-top:8px;">
-        <span class="eyebrow-label">Your Personalised Results</span>
-        <div class="eyebrow-line"></div>
-      </div>
       <div class="stats-row" id="statsRow">
         <div class="stat-tile"><div class="stat-val" id="stat-matches">—</div><div class="stat-label">College Matches</div></div>
         <div class="stat-tile"><div class="stat-val" id="stat-careers">—</div><div class="stat-label">Career Paths</div></div>
@@ -900,33 +588,15 @@ body {
       <div id="tab-dream" class="tab-panel"><div id="dream-list"></div></div>
       <div id="tab-roadmap" class="tab-panel"><div id="roadmap-list"></div></div>
     </div>
-
   </main>
 
-  <!-- SIDEBAR -->
   <aside class="sidebar-panel">
-    <div class="chat-header">
-      <div class="chat-avatar">🧭</div>
-      <div class="chat-header-info">
-          <div class="chat-header-name">Pathfinder</div>
-          <div class="chat-header-status"><div class="status-dot"></div> Ready to help</div>
-        </div>
-    </div>
-    <div class="quick-chips" id="quickChips">
-      <div class="chip" onclick="quickAsk('How do I improve my JEE rank?')">📝 JEE tips</div>
-      <div class="chip" onclick="quickAsk('How to crack NEET?')">🩺 NEET tips</div>
-      <div class="chip" onclick="quickAsk('What makes a strong college essay or SOP?')">✍️ SOP advice</div>
-      <div class="chip" onclick="quickAsk('What extracurriculars impress top colleges?')">🏆 Activities</div>
-      <div class="chip" onclick="quickAsk('How does scholarship and financial aid work in India?')">💰 Scholarships</div>
-      <div class="chip" onclick="quickAsk('What is JoSAA counselling and how does it work?')">🗂 JoSAA guide</div>
-    </div>
+    <div class="chat-header"><div class="chat-avatar">🧭</div><div><div class="chat-header-name">Pathfinder</div><div class="chat-header-status"><div class="status-dot"></div> Ready to help</div></div></div>
     <div class="chat-messages" id="chatMessages">
-      <div class="msg msg-bot">
-        Hey! 👋 I'm your college advisor. Ask me anything about JEE, NEET, CUET, SAT, SOPs, scholarships, or career planning — I'm here to help you find your path.
-      </div>
+      <div class="msg msg-bot">Hey! 👋 I'm your college advisor. Ask me anything about JEE, NEET, SAT, SOPs, or scholarships!</div>
     </div>
     <div class="chat-input-wrap">
-      <textarea id="chatInput" rows="1" placeholder="Ask anything about admissions..." onkeydown="chatKeydown(event)" oninput="autoResize(this)"></textarea>
+      <textarea id="chatInput" rows="1" placeholder="Ask anything about admissions..." onkeydown="chatKeydown(event)"></textarea>
       <button class="send-btn" onclick="sendChat()">→</button>
     </div>
   </aside>
@@ -938,26 +608,13 @@ let resumeFile = null;
 let resumeAnalysisData = null;
 let activeExams = new Set();
 
-// ── EXAM DEFINITIONS ───────────────────────────────────
 const examDefs = {
-  'jee-main':  { label: 'JEE Main Score', placeholder: 'e.g. 98.5 percentile', hint: 'JEE Main percentile determines NIT/IIIT/GFTI eligibility. 99+ for top NITs.', fields: [{ id: 'jee-main-score', label: 'Percentile (out of 100)', placeholder: 'e.g. 98.50' }] },
-  'jee-adv':   { label: 'JEE Advanced', placeholder: '', hint: 'JEE Advanced rank (CRL) determines IIT eligibility. Top 2.5L JEE Main qualifiers can appear.', fields: [{ id: 'jee-adv-rank', label: 'CRL Rank', placeholder: 'e.g. 3450' }] },
-  'neet':      { label: 'NEET-UG Score', placeholder: 'e.g. 680/720', hint: 'NEET score 600+ needed for government MBBS. 500+ for private colleges. 720 is maximum.', fields: [{ id: 'neet-score', label: 'Score (out of 720)', placeholder: 'e.g. 665' }, { id: 'neet-rank', label: 'All-India Rank (optional)', placeholder: 'e.g. 12500' }] },
-  'cuet':      { label: 'CUET-UG Score', placeholder: '', hint: 'CUET score is subject-wise (out of 200 per subject). 170+ in domain subject needed for top Central Universities.', fields: [{ id: 'cuet-score', label: 'Best Domain Score (out of 200)', placeholder: 'e.g. 185' }, { id: 'cuet-subjects', label: 'Subjects Appeared In', placeholder: 'e.g. Physics, Chemistry, Math' }] },
-  'bitsat':    { label: 'BITSAT Score', placeholder: '', hint: 'BITSAT max score is 390. 360+ for BITS Pilani top branches. 320+ for BITS Hyderabad/Goa.', fields: [{ id: 'bitsat-score', label: 'Score (out of 390)', placeholder: 'e.g. 345' }] },
-  'viteee':    { label: 'VITEEE Rank', placeholder: '', hint: 'VITEEE rank under 1000 for CSE at VIT Vellore. Good option alongside JEE.', fields: [{ id: 'viteee-rank', label: 'Rank', placeholder: 'e.g. 2500' }] },
-  'mhtcet':    { label: 'MHT-CET Percentile', placeholder: '', hint: 'MHT-CET 99+ percentile for top Mumbai/Pune engineering colleges.', fields: [{ id: 'mhtcet-score', label: 'Percentile (PCM/PCB)', placeholder: 'e.g. 97.4' }] },
-  'kcet':      { label: 'KCET Rank', placeholder: '', hint: 'KCET Rank under 5000 for top Karnataka engineering colleges (RV, MSRIT, BMS).', fields: [{ id: 'kcet-rank', label: 'Rank', placeholder: 'e.g. 3800' }] },
-  'wbjee':     { label: 'WBJEE Rank', placeholder: '', hint: 'WBJEE rank under 5000 for IIEST and Jadavpur University top branches.', fields: [{ id: 'wbjee-rank', label: 'Rank', placeholder: 'e.g. 2200' }] },
-  'sat':       { label: 'SAT Score', placeholder: '', hint: 'SAT 1400+ for competitive US universities. 1550+ for Ivy League / MIT / Stanford.', fields: [{ id: 'sat-score', label: 'Composite Score (out of 1600)', placeholder: 'e.g. 1480' }] },
-  'act':       { label: 'ACT Score', placeholder: '', hint: 'ACT 31+ is competitive. 35–36 for top US schools. Many schools are now test-optional.', fields: [{ id: 'act-score', label: 'Composite Score (out of 36)', placeholder: 'e.g. 32' }] },
-  'gre':       { label: 'GRE Scores', placeholder: '', hint: 'GRE 320+ (Verbal + Quant) for top MS programs. 330+ for very competitive schools.', fields: [{ id: 'gre-verbal', label: 'Verbal (130–170)', placeholder: 'e.g. 158' }, { id: 'gre-quant', label: 'Quant (130–170)', placeholder: 'e.g. 165' }] },
-  'gmat':      { label: 'GMAT Score', placeholder: '', hint: 'GMAT 700+ for top MBA programs (IIM, ISB abroad). 730+ for global M7 schools.', fields: [{ id: 'gmat-score', label: 'Total Score (200–800)', placeholder: 'e.g. 720' }] },
-  'ielts':     { label: 'IELTS Score', placeholder: '', hint: 'IELTS 7.0+ required by most UK/Australia/Canada universities. 7.5+ for top programs.', fields: [{ id: 'ielts-score', label: 'Overall Band Score', placeholder: 'e.g. 7.5' }] },
-  'toefl':     { label: 'TOEFL Score', placeholder: '', hint: 'TOEFL 100+ (iBT) for most US universities. 110+ for Harvard, MIT, Stanford.', fields: [{ id: 'toefl-score', label: 'iBT Total Score (0–120)', placeholder: 'e.g. 105' }] },
-  'cat':       { label: 'CAT Score', placeholder: '', hint: 'CAT 99+ percentile for IIM ABC. 95+ for new IIMs and top private B-schools.', fields: [{ id: 'cat-score', label: 'Overall Percentile', placeholder: 'e.g. 97.4' }] },
-  'clat':      { label: 'CLAT Score', placeholder: '', hint: 'CLAT score 100+ (out of 120) for NLU Delhi, NLS Bangalore. 90+ for other NLUs.', fields: [{ id: 'clat-score', label: 'Score (out of 120)', placeholder: 'e.g. 104' }] },
-  'upsc':      { label: 'UPSC Stage', placeholder: '', hint: 'UPSC CSE General category cut-off for Prelims is typically 90–100 (GS Paper 1).', fields: [{ id: 'upsc-stage', label: 'Current Stage', placeholder: 'e.g. Aspirant / Prelims appeared / Mains' }] },
+  'jee-main': { label: 'JEE Main Score', hint: 'JEE Main percentile determines NIT/IIIT eligibility. 99+ for top NITs.', fields: [{ id: 'jee-main-score', label: 'Percentile (out of 100)', placeholder: 'e.g. 98.50' }] },
+  'neet': { label: 'NEET-UG Score', hint: 'NEET score 600+ for government MBBS.', fields: [{ id: 'neet-score', label: 'Score (out of 720)', placeholder: 'e.g. 665' }] },
+  'sat': { label: 'SAT Score', hint: 'SAT 1400+ for competitive US universities.', fields: [{ id: 'sat-score', label: 'Composite Score (out of 1600)', placeholder: 'e.g. 1480' }] },
+  'ielts': { label: 'IELTS Score', hint: 'IELTS 7.0+ required by most universities.', fields: [{ id: 'ielts-score', label: 'Overall Band Score', placeholder: 'e.g. 7.5' }] },
+  'toefl': { label: 'TOEFL Score', hint: 'TOEFL 100+ for most US universities.', fields: [{ id: 'toefl-score', label: 'iBT Total Score (0–120)', placeholder: 'e.g. 105' }] },
+  'gre': { label: 'GRE Scores', hint: 'GRE 320+ for top MS programs.', fields: [{ id: 'gre-verbal', label: 'Verbal (130–170)', placeholder: 'e.g. 158' }, { id: 'gre-quant', label: 'Quant (130–170)', placeholder: 'e.g. 165' }] }
 };
 
 function toggleExam(btn) {
@@ -970,45 +627,22 @@ function toggleExam(btn) {
     btn.classList.add('active');
   }
   renderExamInputs();
-  updateProgress();
 }
 
 function renderExamInputs() {
   const container = document.getElementById('examInputsContainer');
   container.innerHTML = '';
-  if (activeExams.size === 0) return;
-
   activeExams.forEach(key => {
     const def = examDefs[key];
     if (!def) return;
     const wrap = document.createElement('div');
     wrap.style.cssText = 'margin-top:14px;padding:14px 16px;background:var(--canvas);border-radius:var(--radius-sm);border:1px solid var(--border-strong);';
-    
-    let fieldsHtml = def.fields.map(f => `
-      <div class="field">
-        <label>${f.label}</label>
-        <input type="text" id="${f.id}" placeholder="${f.placeholder}">
-      </div>
-    `).join('');
-
-    wrap.innerHTML = `
-      <div style="font-size:0.78rem;font-weight:600;color:var(--ink2);margin-bottom:10px;letter-spacing:0.05em;text-transform:uppercase;">${def.label}</div>
-      <div class="field-grid" style="margin-bottom:0;">${fieldsHtml}</div>
-      <div style="margin-top:10px;background:var(--teal-light);border-left:3px solid var(--teal);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:7px 11px;font-size:0.77rem;color:var(--ink2);">
-        ℹ️ ${def.hint}
-      </div>
-    `;
+    let fieldsHtml = def.fields.map(f => `<div class="field"><label>${f.label}</label><input type="text" id="${f.id}" placeholder="${f.placeholder}"></div>`).join('');
+    wrap.innerHTML = `<div style="font-size:0.78rem;font-weight:600;margin-bottom:10px;">${def.label}</div><div class="field-grid">${fieldsHtml}</div><div style="margin-top:10px;background:var(--teal-light);padding:7px 11px;font-size:0.77rem;">ℹ️ ${def.hint}</div>`;
     container.appendChild(wrap);
   });
 }
 
-// ── TIPS ACCORDION ─────────────────────────────────────
-function toggleTip(id) {
-  const el = document.getElementById(id);
-  el.classList.toggle('open');
-}
-
-// ── DREAM UNI TAGS ─────────────────────────────────────
 function addDreamUni(e) {
   if (e.key !== 'Enter') return;
   e.preventDefault();
@@ -1019,35 +653,16 @@ function addDreamUni(e) {
   renderUniTags();
   input.value = '';
 }
+
 function removeUni(name) {
   dreamUnis = dreamUnis.filter(u => u !== name);
   renderUniTags();
 }
+
 function renderUniTags() {
-  document.getElementById('uniTagsWrap').innerHTML = dreamUnis.map(u =>
-    `<span class="uni-tag">${u}<button onclick="removeUni('${u.replace(/'/g,"\\'")}')">×</button></span>`
-  ).join('');
-  updateProgress();
+  document.getElementById('uniTagsWrap').innerHTML = dreamUnis.map(u => `<span class="uni-tag">${u}<button onclick="removeUni('${u.replace(/'/g,"\\'")}')">×</button></span>`).join('');
 }
 
-// ── CHECKLIST ──────────────────────────────────────────
-function toggleCheck(el) {
-  el.classList.toggle('checked');
-  el.querySelector('.check-box').textContent = el.classList.contains('checked') ? '✓' : '';
-}
-
-// ── PROGRESS ────────────────────────────────────────────
-function updateProgress() {
-  const gpa = document.getElementById('gpa').value;
-  const major = document.getElementById('major').value;
-  const steps = [!!gpa, !!major, dreamUnis.length > 0, activeExams.size > 0];
-  steps.forEach((done, i) => {
-    const el = document.getElementById(`ps${i+1}`);
-    if (el) el.className = 'pstep ' + (done ? 'done' : i === steps.filter(Boolean).length ? 'active' : '');
-  });
-}
-
-// ── FILE UPLOAD ────────────────────────────────────────
 const resumeInput = document.getElementById('resumeFile');
 const uploadZone = document.getElementById('uploadZone');
 resumeInput.addEventListener('change', e => handleFile(e.target.files[0]));
@@ -1056,184 +671,158 @@ uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag
 uploadZone.addEventListener('drop', e => { e.preventDefault(); uploadZone.classList.remove('dragging'); if (e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]); });
 
 function handleFile(file) {
-  if (!file) return;
-  if (file.type !== 'application/pdf') { alert('Please upload a PDF file.'); return; }
+  if (!file || file.type !== 'application/pdf') { alert('Please upload a PDF file.'); return; }
   resumeFile = file;
   document.getElementById('fileAttachedName').textContent = file.name;
-  document.getElementById('fileAttachedSize').textContent = (file.size / 1024).toFixed(0) + ' KB';
   document.getElementById('fileAttached').style.display = 'flex';
-  updateProgress();
-  addBotMsg(`📄 Got your CV: <strong>${file.name}</strong>. Analysing it now...`);
-  setTimeout(() => runResumeAnalysis(file.name), 700);
+  runResumeAnalysis(file.name);
 }
+
 function removeResume() {
   resumeFile = null; resumeAnalysisData = null;
   document.getElementById('resumeFile').value = '';
   document.getElementById('fileAttached').style.display = 'none';
   document.getElementById('scoreSection').style.display = 'none';
-  updateProgress();
-  addBotMsg("CV removed. Upload a new one any time.");
 }
+
 function runResumeAnalysis(fname) {
-  const n = fname.toLowerCase();
-  let s = { academic: 7, leadership: 5, projects: 6, overall: 6.2 };
-  let tip = "Add quantifiable achievements (e.g. 'Led a team of 10, improved performance by 30%') to strengthen your profile.";
-  if (n.includes('engineer') || n.includes('dev') || n.includes('cs')) { s = { academic: 8, leadership: 6, projects: 8.5, overall: 7.8 }; tip = "Great technical profile! Contribute to open-source projects and build a clean portfolio site."; }
-  else if (n.includes('medical') || n.includes('neet') || n.includes('mbbs')) { s = { academic: 8.5, leadership: 5, projects: 6, overall: 7.1 }; tip = "Strong academics! Research internships at hospitals and publications will elevate your application."; }
-  else if (n.includes('business') || n.includes('mba') || n.includes('commerce')) { s = { academic: 7, leadership: 8.5, projects: 6, overall: 7.2 }; tip = "Strong leadership showing! Add a startup, case competition win, or quantified business impact."; }
+  const s = { academic: 7.2, leadership: 6.5, projects: 6.8, overall: 6.9 };
   resumeAnalysisData = s;
-  const sec = document.getElementById('scoreSection');
-  sec.style.display = 'block';
+  document.getElementById('scoreSection').style.display = 'block';
   setTimeout(() => {
     setScore('academic', s.academic); setScore('leadership', s.leadership);
     setScore('projects', s.projects); setScore('overall', s.overall);
-    document.getElementById('scoreTip').textContent = '💡 ' + tip;
+    document.getElementById('scoreTip').textContent = '💡 Add quantifiable achievements to strengthen your profile.';
   }, 100);
-  addBotMsg(`✅ Analysis complete! Overall resume score: <strong>${s.overall}/10</strong>. ${tip}`);
 }
+
 function setScore(key, val) {
   document.getElementById(`sf-${key}`).style.width = (val * 10) + '%';
   document.getElementById(`sv-${key}`).textContent = val.toFixed(1);
 }
 
-// ── GENERATE PLAN ──────────────────────────────────────
-async function generatePlan() {
+function generatePlan() {
   const gpa = document.getElementById('gpa').value.trim();
   const major = document.getElementById('major').value.trim();
   if (!gpa) { alert('Please enter your grade / GPA / percentage.'); return; }
   if (!major) { alert('Please enter your intended major or stream.'); return; }
-  const btn = document.getElementById('generateBtn');
-  btn.disabled = true;
-  btn.innerHTML = '<span>Generating your plan...</span>';
+  
   document.getElementById('resultsWrap').style.display = 'none';
-  document.getElementById('colleges-list').innerHTML = loadingHtml('Finding your college matches');
-  await delay(400);
-  const location = document.getElementById('preferredLocation').value || 'India';
-  const payload = {
-    gpa,
-
-    major,
-
-    location,
-
-    budget: document.getElementById("maxTuition")?.value || "",
-
-    dream: dreamUnis || [],
-
-    resumeScore: resumeAnalysisData?.overall ?? 7
-  };
-  try {
-    const res = await fetch('/api/generate', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-
-    if (!res.ok) {
-      const error = await res.text();
-      throw new Error(error || 'Generation failed');
-    }
-
-    const result = await res.json();
-
-    const colleges = result.colleges || [];
-    const careers = result.careers || [];
-    const roadmap = result.roadmap || [];
-
-    document.getElementById('stat-matches').textContent = colleges.length;
-    document.getElementById('stat-careers').textContent = careers.length;
-    document.getElementById('stat-score').textContent = resumeAnalysisData ? resumeAnalysisData.overall.toFixed(1) : '7.4';
-
-    renderColleges(result.colleges || []);
-    renderCareers(result.careers || []);
-    renderRoadmap(result.roadmap || []);
-    renderDream(result.dream?.analysis || 'No analysis generated.');
-
-    document.getElementById('resultsWrap').style.display = 'block';
-    document.getElementById('resultsWrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    const studentName = document.getElementById('studentName')?.value?.trim() || 'there';
-    addBotMsg(`✨ Your plan is ready, ${studentName}!`);
-  } catch (err) {
-    alert('Failed to generate plan. Please try again later. ' + (err?.message || ''));
-    document.getElementById('colleges-list').innerHTML = '';
-  } finally {
-    btn.disabled = false;
-    btn.innerHTML = 'Generate Plan';
-  }
+  
+  const profileScore = resumeAnalysisData ? resumeAnalysisData.overall.toFixed(1) : '7.2';
+  const location = document.getElementById('preferredLocation').value || 'International';
+  
+  const colleges = [
+    { name: "Massachusetts Institute of Technology (MIT)", location: "USA", acceptance: 4, type: "reach", match: 68, tuition: 55000, requiredGPA: 3.9, tip: "Focus on research experience and strong extracurriculars." },
+    { name: "Stanford University", location: "USA", acceptance: 4, type: "reach", match: 65, tuition: 56000, requiredGPA: 3.9, tip: "Leadership roles and unique projects will help you stand out." },
+    { name: "University of California, Berkeley", location: "USA", acceptance: 11, type: "target", match: 78, tuition: 44000, requiredGPA: 3.8, tip: "Strong essays are crucial for UC schools." },
+    { name: "University of Michigan", location: "USA", acceptance: 20, type: "target", match: 82, tuition: 52000, requiredGPA: 3.7, tip: "Demonstrated interest matters - attend virtual info sessions." },
+    { name: "Arizona State University", location: "USA", acceptance: 85, type: "safety", match: 94, tuition: 32000, requiredGPA: 3.2, tip: "Excellent scholarship opportunities for international students." }
+  ];
+  
+  const careers = [
+    { title: major + " Engineer / Developer", salary: "$95k - $150k", outlook: "22% growth", fit: 88, skills: ["Problem Solving", major + " Fundamentals", "System Design"], tip: "Build a portfolio of 3-4 substantial projects." },
+    { title: "Product Manager", salary: "$110k - $160k", outlook: "15% growth", fit: 76, skills: ["Communication", "Strategy", "Data Analysis"], tip: "Leadership experience and technical background are valuable." },
+    { title: "Data Scientist / AI Specialist", salary: "$105k - $165k", outlook: "35% growth", fit: 82, skills: ["Python", "Machine Learning", "Statistics"], tip: "Kaggle competitions add significant weight to your resume." }
+  ];
+  
+  const dreamAnalysis = dreamUnis.length > 0 ? dreamUnis.map(uni => ({
+    college: uni,
+    currentCompetitiveness: Math.floor(Math.random() * 40) + 45,
+    improvements: [
+      "Improve standardized test scores to 90th percentile or higher",
+      "Complete 2-3 major projects relevant to your intended major",
+      "Secure research or internship experience in your field",
+      "Develop leadership roles in extracurricular activities",
+      "Strengthen your personal statement with unique personal stories"
+    ]
+  })) : [{
+    college: "Your Dream University",
+    currentCompetitiveness: 55,
+    improvements: [
+      "Research and add specific dream universities above",
+      "Improve academic credentials and test scores",
+      "Build a strong portfolio of relevant projects"
+    ]
+  }];
+  
+  const roadmap = [
+    { month: "Month 1-2", priority: "High", tasks: ["Research universities matching your profile and budget", "Register for required entrance exams", "Start drafting your personal statement/SOP"] },
+    { month: "Month 3-4", priority: "High", tasks: ["Take standardized tests (SAT/ACT/GRE)", "Request letters of recommendation from teachers", "Build or enhance your project portfolio"] },
+    { month: "Month 5-6", priority: "Med", tasks: ["Complete and polish all application essays", "Submit early applications (if applicable)", "Research and apply for scholarships"] }
+  ];
+  
+  document.getElementById('stat-matches').textContent = colleges.length;
+  document.getElementById('stat-careers').textContent = careers.length;
+  document.getElementById('stat-score').textContent = profileScore;
+  
+  renderColleges(colleges);
+  renderCareers(careers);
+  renderDream(dreamAnalysis);
+  renderRoadmap(roadmap);
+  
+  document.getElementById('resultsWrap').style.display = 'block';
+  document.getElementById('resultsWrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  
+  const studentName = document.getElementById('studentName')?.value?.trim() || 'there';
+  addBotMsg(`✨ Your personalised plan is ready, ${studentName}! Check out your college matches and career recommendations below.`);
 }
-function loadingHtml(msg) {
-  return `<div class="loading-wrap"><div class="loading-spinner"></div><p>${msg}…</p></div>`;
-}
-
-// ── DATA ───────────────────────────────────────────────
-// The frontend no longer contains a fake AI generator. Generation is handled by the server at `/api/generate`.
 
 function renderColleges(list) {
   document.getElementById('colleges-list').innerHTML = list.map(c => `
     <div class="r-card">
       <div class="r-card-head">
         <div><div class="r-card-name">${c.name}</div><div class="r-card-sub">${c.location} · ${c.acceptance}% acceptance rate</div></div>
-        <span class="badge badge-${c.type.toLowerCase()}">${c.type}</span>
+        <span class="badge badge-${c.type}">${c.type}</span>
       </div>
       <div class="match-bar-wrap">
         <div class="match-bar-head"><span>Match Score</span><span>${c.match}%</span></div>
         <div class="match-bar"><div class="match-fill" style="width:${c.match}%"></div></div>
       </div>
-      <div class="r-meta">
-        <span>💰 ₹/$ ${c.tuition.toLocaleString()}/year</span>
-        <span>📈 Score/GPA: ${c.requiredGPA}+ recommended</span>
+      <div class="match-bar-wrap" style="margin-top:8px;">
+        <div class="match-bar-head"><span>Required GPA</span><span>${c.requiredGPA}</span></div>
+        <div class="match-bar"><div class="match-fill" style="width:${(c.requiredGPA/4.2)*100}%"></div></div>
       </div>
       <div class="r-tip">💡 ${c.tip}</div>
     </div>
   `).join('');
 }
+
 function renderCareers(list) {
   document.getElementById('careers-list').innerHTML = list.map(c => `
     <div class="r-card">
       <div class="r-card-head">
-        <div><div class="r-card-name">${c.title}</div><div class="r-card-sub">${c.salary} · ${c.outlook}</div></div>
-        <span class="badge badge-fit">${c.fit}% fit</span>
+        <div><div class="r-card-name">${c.title}</div><div class="r-card-sub">${c.salary} · ${c.outlook} job growth</div></div>
+        <span class="badge badge-target">${c.fit}% fit</span>
       </div>
       <div class="match-bar-wrap">
         <div class="match-bar-head"><span>Fit Score</span><span>${c.fit}%</span></div>
         <div class="match-bar"><div class="match-fill" style="width:${c.fit}%"></div></div>
       </div>
-      <div class="r-meta"><span>🔧 ${c.skills.join(' · ')}</span></div>
+      <div class="r-meta" style="margin-top:8px;"><span>🔧 ${c.skills.join(' · ')}</span></div>
       <div class="r-tip">💡 ${c.tip}</div>
     </div>
   `).join('');
 }
+
 function renderDream(list) {
   document.getElementById('dream-list').innerHTML = list.map(d => `
     <div class="r-card">
       <div class="r-card-head">
-        <div><div class="r-card-name">⭐ ${d.college}</div><div class="r-card-sub">Your current competitiveness: ${d.currentCompetitiveness}%</div></div>
-        <span class="badge badge-${d.currentCompetitiveness >= 60 ? 'target' : 'reach'}">${d.currentCompetitiveness}% there</span>
+        <div><div class="r-card-name">⭐ ${d.college}</div><div class="r-card-sub">Current competitiveness: ${d.currentCompetitiveness}%</div></div>
+        <span class="badge badge-reach">${d.currentCompetitiveness >= 60 ? 'Target' : 'Reach'}</span>
       </div>
       <div class="match-bar-wrap"><div class="match-bar"><div class="match-fill" style="width:${d.currentCompetitiveness}%"></div></div></div>
-      <p style="font-size:.78rem;font-weight:600;color:var(--ink2);margin:13px 0 5px;text-transform:uppercase;letter-spacing:.05em;">To close the gap:</p>
+      <p style="font-size:.78rem;font-weight:600;margin:13px 0 5px;">To close the gap:</p>
       <ul class="gap-items">${d.improvements.map((imp, i) => `<li><span class="gap-dot">${i+1}</span>${imp}</li>`).join('')}</ul>
     </div>
   `).join('');
 }
+
 function renderRoadmap(list) {
-  document.getElementById('roadmap-list').innerHTML = `
-    <div class="card" style="margin-bottom:0;">
-      <div class="timeline">
-        ${list.map(r => `
-          <div class="tl-item ${r.priority === 'High' ? 'high' : ''}">
-            <div class="tl-dot"></div>
-            <div class="tl-month">${r.month}<span class="tl-priority ${r.priority === 'High' ? 'priority-high' : 'priority-med'}">${r.priority}</span></div>
-            <ul class="tl-tasks">${r.tasks.map(t => `<li>${t}</li>`).join('')}</ul>
-          </div>
-        `).join('')}
-      </div>
-    </div>
-  `;
+  document.getElementById('roadmap-list').innerHTML = `<div class="card" style="margin-bottom:0;"><div class="timeline">${list.map(r => `<div class="tl-item ${r.priority === 'High' ? 'high' : ''}"><div class="tl-dot"></div><div class="tl-month">${r.month}<span class="tl-priority priority-high">${r.priority}</span></div><ul class="tl-tasks">${r.tasks.map(t => `<li>${t}</li>`).join('')}</ul></div>`).join('')}</div></div>`;
 }
 
-// ── TABS ───────────────────────────────────────────────
 function showTab(name, btn) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
@@ -1241,67 +830,45 @@ function showTab(name, btn) {
   document.getElementById(`tab-${name}`).classList.add('active');
 }
 
-// ── CHAT ───────────────────────────────────────────────
-function quickAsk(q) { document.getElementById('chatInput').value = q; sendChat(); }
-function chatKeydown(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); } }
-function autoResize(el) { el.style.height = 'auto'; el.style.height = Math.min(el.scrollHeight, 90) + 'px'; }
-
-async function sendChat() {
-  const input = document.getElementById('chatInput');
-  const q = input.value.trim();
-  if (!q) return;
-  input.value = ''; input.style.height = 'auto';
-  addUserMsg(q);
-  const thinking = addThinkingMsg();
-  await delay(800 + Math.random() * 500);
-  thinking.remove();
-  const major = document.getElementById('major').value || 'your field';
-  const ql = q.toLowerCase();
-  let reply;
-  if (ql.includes('jee') || ql.includes('iit')) {
-    reply = `For JEE, consistency beats intensity. Follow a structured 3-subject daily schedule: 2 hrs Physics, 2 hrs Chemistry, 2 hrs Maths. <strong>NCERT is non-negotiable</strong> — master it completely before moving to HC Verma or RD Sharma. Solve past 10 years' JEE papers. Mock tests every Sunday. Your weak chapters need 80% of your effort — don't over-invest in your strengths.`;
-  } else if (ql.includes('neet')) {
-    reply = `NEET is 720 marks — Biology alone is 360. <strong>NCERT Biology (Class 11 & 12) is your bible.</strong> Read it 3–4 times. For Chemistry: NCERT first, then reference books for Organic. For Physics: focus on high-yield chapters (Optics, Mechanics, Modern Physics). Mock tests under real conditions are essential. 600+ needs roughly 80% accuracy across all three subjects.`;
-  } else if (ql.includes('cuet')) {
-    reply = `CUET domain subjects follow <strong>NCERT strictly</strong> — stray outside only after mastering NCERT. The English section rewards daily newspaper reading (The Hindu/Indian Express). General Test needs current affairs and reasoning practice. Top Central Universities require 170+ in domain subjects. Time management in the actual exam is critical — the slots are short.`;
-  } else if (ql.includes('josaa') || ql.includes('counselling') || ql.includes('josaa')) {
-    reply = `JoSAA counselling runs multiple rounds. <strong>Fill all 75 choices</strong> — don't leave slots empty. Strategise: list IITs first, then NITs, then IIITs/GFTIs. Choose "Freeze" only when fully satisfied. Use the previous year's opening/closing ranks as a guide — the NIC JoSAA portal publishes these. Keep all original documents ready. Sliding and floating options help you upgrade in later rounds.`;
-  } else if (ql.includes('scholarship') || ql.includes('financial') || ql.includes('nsp') || ql.includes('aid')) {
-    reply = `For Indian students: <strong>National Scholarship Portal (scholarships.gov.in)</strong> is the primary portal for central government scholarships. Apply early — funds are limited. Also check AICTE, your state government portal, and institution-specific scholarships. For abroad: submit FAFSA (USA) or Student Finance (UK) as early as possible. Inlaks, Tata Trust, and Narotam Sekhsaria Foundation offer top scholarships for Indian students going abroad.`;
-  } else if (ql.includes('sop') || ql.includes('essay') || ql.includes('statement')) {
-    reply = `A strong SOP: <strong>1)</strong> Opens with a specific moment that sparked your interest — not a generic "Since childhood I was curious." <strong>2)</strong> Shows academic growth with evidence. <strong>3)</strong> Connects your past to what you'll do at that specific institution. <strong>4)</strong> Avoids padding and clichés. Draft early, revise at least 4 times, get it reviewed by a mentor or senior who got into a top school.`;
-  } else if (ql.includes('extracurricular') || ql.includes('activities') || ql.includes('olympiad')) {
-    reply = `Quality over quantity, always. 2–3 deep commitments > 10 surface ones. For top Indian colleges: <strong>Olympiad medals</strong> (INMO, INPHO, INChO) carry real weight. For global applications: research papers, open-source contributions, founding a club, winning a national competition. Activities that connect to your intended major tell a coherent story.`;
-  } else if (ql.includes('ielts') || ql.includes('toefl') || ql.includes('english')) {
-    reply = `For <strong>IELTS</strong>: target 7.0+ overall (7.5+ for top programs). Practice all four skills daily — Reading and Listening are scorable quickly; Writing Task 2 and Speaking take 4–6 weeks to improve. For <strong>TOEFL</strong>: target 100+ iBT. The Integrated Writing section is uniquely challenging — practice note-taking during the audio. Both exams reward consistent daily practice over 3–4 months more than cramming.`;
-  } else {
-    reply = `Great question! For <strong>${major}</strong>, the key pillars are: <strong>1)</strong> Solid exam scores in the relevant entrance test, <strong>2)</strong> Meaningful experiences that prove your interest (projects, internships, research), <strong>3)</strong> Strong recommendation letters from people who know your work closely, and <strong>4)</strong> A compelling SOP that tells a coherent story. Which of these would you like to dive deeper into?`;
-  }
-  addBotMsg(reply);
-}
-
+// Chat functionality
 function addUserMsg(text) {
   const w = document.getElementById('chatMessages');
   const d = document.createElement('div'); d.className = 'msg msg-user'; d.textContent = text;
   w.appendChild(d); w.scrollTop = w.scrollHeight;
 }
+
 function addBotMsg(html) {
   const w = document.getElementById('chatMessages');
   const d = document.createElement('div'); d.className = 'msg msg-bot'; d.innerHTML = html;
   w.appendChild(d); w.scrollTop = w.scrollHeight;
 }
-function addThinkingMsg() {
-  const w = document.getElementById('chatMessages');
-  const d = document.createElement('div'); d.className = 'msg msg-bot msg-thinking';
-  d.innerHTML = '<div class="think-dot"></div><div class="think-dot"></div><div class="think-dot"></div>';
-  w.appendChild(d); w.scrollTop = w.scrollHeight; return d;
-}
-function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-document.querySelectorAll('input, select').forEach(el => {
-  el.addEventListener('input', updateProgress);
-  el.addEventListener('change', updateProgress);
-});
+function sendChat() {
+  const input = document.getElementById('chatInput');
+  const q = input.value.trim();
+  if (!q) return;
+  input.value = '';
+  addUserMsg(q);
+  
+  const ql = q.toLowerCase();
+  let reply;
+  if (ql.includes('jee')) {
+    reply = "For JEE, focus on NCERT first, then solve previous 10 years' papers. Consistency with daily practice of 2 hours per subject is key. Mock tests every weekend help identify weak areas.";
+  } else if (ql.includes('neet')) {
+    reply = "NEET strategy: Master NCERT Biology (it's 360/720 marks!), solve previous papers, and take timed mock tests. Focus on high-yield topics in Physics and Chemistry.";
+  } else if (ql.includes('sop') || ql.includes('essay')) {
+    reply = "A strong SOP opens with a specific moment, shows growth with evidence, connects your past to future goals, and mentions specific programs/faculty at each university.";
+  } else if (ql.includes('scholarship')) {
+    reply = "For scholarships: Check NSP (India), FAFSA (USA), and university-specific aid. Apply early - many are first-come, first-served. Strong essays matter for merit scholarships.";
+  } else if (ql.includes('extracurricular')) {
+    reply = "Quality over quantity! 2-3 deep commitments with leadership roles beat 10 surface activities. Focus on activities connected to your intended major.";
+  } else {
+    reply = "Great question! For college admissions, focus on: 1) Strong test scores, 2) Meaningful extracurriculars, 3) Compelling essays, and 4) Solid recommendations. Which area would you like to explore more?";
+  }
+  addBotMsg(reply);
+}
+
+function chatKeydown(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); } }
 </script>
 </body>
 </html>
